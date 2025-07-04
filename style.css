@@ -1,0 +1,124 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    background-color: #444;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #555;
+    padding: 2em;
+    text-align: center;
+}
+
+#hero-video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Featured Videos Section */
+.featured-videos {
+    background-color: #666;
+    padding: 2em;
+}
+
+.featured-videos ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.featured-videos li {
+    margin: 20px;
+    width: calc(33.33% - 20px);
+}
+
+.featured-videos img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.featured-videos h3 {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #444;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+
+/* Animations and Transitions */
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    .featured-videos li {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .featured-videos li {
+        width: 100%;
+    }
+}
